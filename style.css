@@ -1,0 +1,505 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 ;
+  }
+  body:hover ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  
+
+#cursor {
+  width: 30px; 
+  height: 30px;
+  border: 2px solid rgb(114, 105, 105); 
+  border-radius: 50%; 
+  position: fixed; 
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  background-color: transparent; 
+  z-index: 9999; 
+}
+
+
+.header {
+  display: grid; 
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center; 
+  padding: 10px 20px;
+  background-color: #f27c29;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo img {
+  height: 60px; 
+  display: block;
+  margin: 0 auto; 
+}
+
+
+.hamburger {
+  text-align: right;
+}
+
+
+.menu-toggle {
+  display: none;
+}
+
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.menu {
+  display: none; 
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.menu a:hover {
+  background-color: #444;
+  color: #4CAF50;
+  border-radius: 5px;
+}
+
+
+.menu-toggle:checked ~ .menu {
+  display: flex;
+}
+
+/*main*/
+
+main {
+  padding-top: 130px;
+  min-height: 70vh;
+}
+
+.upper-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-container {
+  margin-left: 70px;
+}
+
+.box-1 {
+  width: 50%;
+  max-height: 330px;
+  margin-left:70px;
+  margin-right: 70px;
+  background:#f27c29;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow:5px 5px #f27c29;
+  position: relative;
+}
+
+.box-1 img {
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.box-1 h1 {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  left: 23%;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.box-1 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.box-1 .click-box {
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  bottom: 33%;
+  left: 35%;
+  background-color: #1d00ff;
+  padding: 15px;
+}
+
+.bottom-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.box-2 {
+  width: 60%;
+  max-height: 330px;
+  margin-left:70px;
+  background:#f27c29;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow:5px 5px #f27c29;
+  position: relative;
+}
+
+.box-2 img {
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.box-2 h1 {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  left: 35%;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.box-2 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.box-2 .click-box {
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  bottom: 33%;
+  left: 35%;
+  background-color: #1d00ff;
+  padding: 15px;
+}
+
+.box-3 {
+  width: 30%;
+  max-height: 330px;
+  margin-left:70px;
+  margin-right: 70px;
+  background:#f27c29;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow:5px 5px #f27c29;
+  position: relative;
+}
+
+.box-3 img {
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.box-3 h1 {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  left: 7%;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.box-3 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.box-3 .click-box {
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  bottom: 33%;
+  left: 21%;
+  background-color: #1d00ff;
+  padding: 15px;
+}
+
+h1 {
+  text-align: left;
+  max-width: 500px;
+  color: #140779;
+  /*font-family: @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');;*/
+  font-size: 36px 
+}
+h2 {
+  color: #ffffff;
+}
+h3 {
+  text-align: left;
+  max-width: 500px;
+  line-height: 1,5;
+  color: #140779;
+  /*font-family:@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap'); ;*/
+}
+h4 {
+  text-align: left;
+  max-width: 500px;
+  line-height: 1,5;
+  color: #1d00ff;
+  
+}
+h6 {
+  text-align: left;
+  color: #fff;
+}
+
+/*footer*/
+
+footer {
+  background-color: #f27c29; 
+  color: #fff; 
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex; 
+  gap: 20px; 
+  justify-content: center;
+  margin-bottom: 10px; 
+}
+
+.icon i {
+  font-size: 32px; 
+  color: #fff; 
+  transition: transform 0.2s, color 0.2s; 
+}
+
+.icon i:hover {
+  transform: scale(1.2); 
+  color: #140779; 
+}
+
+.footer-text {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.cookie-link {
+  color: #140779;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links li a:hover {
+  color: #140779;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none; 
+      position: absolute;
+      top: 60px;
+      right: 0;
+      flex-direction: column;
+      background-color: #333;
+      width: 200px;
+      text-align: center;
+  }
+
+  .nav-links.active {
+      display: flex; 
+  }
+
+  .nav-links li {
+      padding: 10px;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0; /* Verbergt de scrollbar */
+    height: 0; /* Voor horizontale scrollbars */
+  }
+  
+  /* Scrollbalk verschijnt bij hover op het scrollbare element */
+  .scrollable:hover ::-webkit-scrollbar {
+    width: 12px; /* Maak scrollbar zichtbaar */
+    height: 12px; /* Maak horizontale scrollbar zichtbaar */
+  }
+  
+  /* Achtergrond van de scrollbar */
+  .scrollable:hover ::-webkit-scrollbar-track {
+    background: #140779; /* Donkerblauwe kleur */
+    border-radius: 10px; /* Ronde hoeken */
+  }
+  
+  /* Scrollbalk "thumb" (het verplaatsbare deel) */
+  .scrollable:hover ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #140779, #1d00ff); /* Verloop tussen blauw en paarsblauw */
+    border-radius: 10px; /* Ronde hoeken */
+  }
+  
+  /* Hover-effect op de "thumb" */
+  .scrollable:hover ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1d00ff, #140779); /* Omgekeerd verloop bij hover */
+  }
+  
+  /* Voor Firefox: verberg scrollbar standaard */
+  .scrollable {
+    scrollbar-width: none; /* Verberg scrollbar */
+  }
+  
+  /* Voor Firefox: toon scrollbar bij hover */
+  .scrollable:hover {
+    scrollbar-width: thin; /* Dunne scrollbar */
+    scrollbar-color: #140779 #1d00ff; /* Thumb en track kleuren */
+  }
+  .boks1 {
+    height: 250px;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 15px;
+  }
+}
+
+@media (max-width:600px){         
+  img{                 
+       width:100%;         
+  } 
+}
+
+/* Dit maakt de tekst in de foto kleiner op te smalle schermen */
+@media only screen and (max-width: 900px) {
+
+  #midden-links #hoofdplaatje #overlay {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Dit maakt de tekst in de foto kleiner op te smalle schermen */
+@media only screen and (max-width: 488px) {
+
+  #midden-links #hoofdplaatje #overlay {
+    font-size: 1.3rem;
+  }
+
+}
+
+/* Iets meer padding om te zorgen dat de opsommingstekens niet buiten het scherm vallen */
+@media only screen and (max-width: 570px) {
+  #midden-links {
+    padding: 20px;
+  }
+}
+
+/* Dit maakt de tekst in de foto kleiner op te smalle schermen */
+@media only screen and (max-width: 350px) {
+  #midden-links #hoofdplaatje #overlay {
+    font-size: 1rem;
+  }
+
+}
+
+/* Dit verbergt het woord 'inloggen' op hele smalle schermen */
+@media only screen and (max-width: 319px) {
+
+  #header-boven-rechts h3 {
+    visibility: hidden;
+    position: absolute;
+  }
+
+}
